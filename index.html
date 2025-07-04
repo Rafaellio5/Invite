@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Приглашение ☕</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="heartsCanvas"></canvas>
+
+  <div class="page active" id="page1">
+    <p>
+      С завтрашнего дня я отправляюсь на другой филиал и, к сожалению, мы не сможем видеться так часто.  
+      <br><br>Но я помню, ты говорила, что дашь знать, когда захочешь кофе в моей компании ☕  
+      <br><br>Поэтому приглашаю тебя сегодня после работы — выпить кофе или поужинать 😊
+    </p>
+    <button onclick="goToPage(2)">Продолжение</button>
+  </div>
+
+  <div class="page" id="page2">
+    <p>Выбери ответ:</p>
+    <button onclick="answer('yes')">Да</button>
+    <button onclick="answer('no')">Нет</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="assets/hearts.js"></script>
+</body>
+</html>
