@@ -12,7 +12,7 @@ function answer(choice) {
     msgBox.textContent = 'Спасибо, я счастлив 😊';
     sendTelegram('Поздравляю 🥳');
   } else {
-    msgBox.textContent = 'Печаль... но уважаю твой выбор 😔';
+    msgBox.textContent = 'Эх';
     sendTelegram('Эх...');
   }
 
