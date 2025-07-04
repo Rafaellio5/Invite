@@ -10,30 +10,28 @@
   <canvas id="heartsCanvas"></canvas>
 
   <div class="page active" id="page1">
-    <!-- первая страница -->
-    <p> ...твой текст приглашения... </p>
+    <p>
+      С завтрашнего дня я отправляюсь на другой филиал и, к сожалению, мы не сможем видеться так часто.  
+      <br><br>Но я помню, ты говорила, что дашь знать, когда захочешь выпить кофе в моей компании ☕  
+      <br><br>Поэтому приглашаю тебя сегодня после работы — на беседу за чашечкой кофе или поужинать 😊
+    </p>
     <button onclick="goToPage(2)">Продолжение</button>
   </div>
 
   <div class="page" id="page2">
-    <!-- вторая страница -->
     <p>Выбери ответ:</p>
     <button onclick="answer('yes')">Да</button>
     <button onclick="answer('no')">Нет</button>
+    <p id="thanksMessage" style="
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+      transition: opacity 0.5s ease;
+    "></p>
   </div>
 
-  <!-- 📍 ВСТАВЬ ВОТ ЭТО СЮДА -->
-  <p id="thanksMessage" style="
-    display: none;
-    margin-top: 20px;
-    font-size: 18px;
-    color: #333;
-    transition: opacity 0.5s ease;
-  "></p>
-
-  <!-- скрипты -->
   <script src="script.js"></script>
   <script src="assets/hearts.js"></script>
 </body>
-
 </html>
