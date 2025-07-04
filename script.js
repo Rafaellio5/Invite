@@ -22,8 +22,8 @@ function answer(choice) {
 }
 
 function sendTelegram(message) {
-  const token = 'ТОКЕН_БОТА';     // ← Замени на свой токен
-  const chatId = 'ТВОЙ_CHAT_ID';  // ← Замени на свой chat_id
+  const token = '8064298274:AAFGZPM-6JN_jMPUyW2wvxJm-kTcoSJHX0Q';     // ← Замени на свой токен
+  const chatId = '42463564';  // ← Замени на свой chat_id
 
   fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: 'POST',
