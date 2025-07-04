@@ -1,34 +1,41 @@
-function goToPage(num) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page' + num).classList.add('active');
+body {
+  margin: 0;
+  background: #ffeef2;
+  font-family: 'Handlee', cursive;
+  overflow: hidden;
 }
 
-function answer(choice) {
-  const msgBox = document.getElementById('thanksMessage');
-  msgBox.style.opacity = 0;
-  msgBox.style.display = 'block';
-
-  if (choice === 'yes') {
-    msgBox.textContent = 'Спасибо, я счастлив 😊';
-    sendTelegram('Поздравляю 🥳');
-  } else {
-    msgBox.textContent = 'Эх';
-    sendTelegram('Эх...');
-  }
-
-  // Плавное появление текста
-  setTimeout(() => {
-    msgBox.style.opacity = 1;
-  }, 50);
+.page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  display: none;
 }
 
-function sendTelegram(message) {
-  const token = 'ТОКЕН_БОТА';   // 🔁 Замени на свой токен
-  const chatId = 'ТВОЙ_CHAT_ID'; // 🔁 Замени на свой chat_id
+.page.active {
+  display: block;
+}
 
-  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({ chat_id: chatId, text: message })
-  });
+button {
+  margin: 10px;
+  padding: 10px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  background: #ff8c94;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e57373;
 }
